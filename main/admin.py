@@ -47,7 +47,7 @@ class LessonVideoAdmin(admin.ModelAdmin):
 
     def get_video(self, obj):
         if obj.video:
-            return mark_safe(f'<video width="75" controls><source src="{obj.video.url}" type="video/mp4">Your browser does not support the video tag.</video>')
+            return mark_safe(f'<video width="50" controls><source src="{obj.video.url}" type="video/mp4">Your browser does not support the video tag.</video>')
         return "No Video"
     
 @admin.register(models.Camment)
